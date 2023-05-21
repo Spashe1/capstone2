@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>National Parks Search Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    </head>
+    
+<body>
+    <header>
+        <div>
+            <h2><a href="http://127.0.0.1:5500/home.html">Home</a></h2>
+            <h2> <a href="http://127.0.0.1:5500/national-park.html">National Parks Search</a></h2>
+            <h2><a href="http://127.0.0.1:5500/mountain-info.html">Mountains Information</a></h2>
+            </div>
+    </header>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("./images/Zeacliff-StoryImg_2.jpg");
+            background-size: cover;
+        }
+    
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            max-width: 500px;
+            text-align: center;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+   <div class="search-container">
+    <div class="search-by">
+      <h1>Search By</h1>
+    </div>
+  
+    <div class="radio-group">
+        <input type="radio" value="" name="btn" id="locationBtn" >
+        <label for="locationBtn">Location</label>
+        <input type="radio" value="" name="btn" id="parkTypeBtn">
+        <label for="parkTypeBtn">Park Type</label>
+      </div>
+      
+  </div>
+  
+  
+  
+    <script src="./scripts/locationData.js"></script>
+    <script src="./scripts/mountainData.js"></script>
+    <script src="./scripts/nationalParkData.js"></script>
+    <script src="./scripts/parkTypeData.js"></script>
+    <script src="./national_parks.js"></script>
+</body>
+</html>
