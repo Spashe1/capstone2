@@ -1,74 +1,157 @@
-
 .search-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  color:ghostwhite;
+  .search-results {
+    font-weight:900 /* Make the font bolder */
   }
+}
+
 .search-by {
-    text-align: center;
-    color: whitesmoke;
-    font-style: initial;
-    font-family: cursive;
-   
-  }
+  text-align: center;
+  margin-bottom: 10px; /* Add margin for spacing */
   
-  .radio-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
-  .radio-group label {
-    margin:0 10px;
-    cursor: pointer;
-    font-size: 40px;
-    font-weight: bold;
-    color: #000000;
-    font-family:'Courier New', Courier, monospace;
-   
-  }
-  
-  .radio-group label:hover {
-    color: lightskyblue;
-  }
-  
-  
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  ul li {
-    position: relative;
-    padding-left: 20px;
-    line-height: 1.5;
-  }
-  
-  ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 6px;
-    width: 8px;
-    height: 8px;
-    background-color: black;
-    border-radius: 50%;
-  }
-  
-  ul li a {
-    color: blue;
-    text-decoration: none;
-  }
-  
-  ul li a:hover {
-    color: lightblue;
-  }
-  
+}
+
+.form-control {
+  color: black;
+  font-style: initial;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.radio-group label {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.radio-group label:hover {
+  color: blue;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 9px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+ul li a {
+  color: blue;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: lightblue;
+}
+
+.text-align {
+  font-weight: bold;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+  outline: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+input[type="radio"]:checked {
+  background-color: black;
+}
+
+.dropdown-container {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll; /* Allow vertical scrolling */
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+header div {
+  display: flex;
+  justify-content: center;
+}
+
+header div h2 {
+  margin: 0 10px;
+}
+
+.main-container {
+  margin-top: 50px;
+  /* Adjust the margin value as needed */
+}
+
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./images/Tecumseh-StoryImg.jpg");
+  background-size: cover;
+  z-index: -1; /*Position it behind other content/*
+  pointer-events: none; /* Ignore pointer events on the background */
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}

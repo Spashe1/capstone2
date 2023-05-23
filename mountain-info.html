@@ -11,6 +11,7 @@
 
 <body>
     <header>
+        <h1>Nature's Blueprint</h1>
         <div>
             <h2><a href="http://127.0.0.1:5500/home.html">Home</a></h2>
             <h2> <a href="http://127.0.0.1:5500/national-park.html">National Parks Search</a></h2>
@@ -46,6 +47,18 @@
             text-align: center;
         }
     </style>
+     <div class="container">
+       <lable for="mountainSelector">Mountain selector</lable>
+       <select id="mountainSelector" class="form-control"></select>
+        <div class="dropdown-container">
+          <label for="mountainSelector">Select a Mountain:</label>
+          <select id="mountainSelector" class="form-control">
+            <option value="">Select a mountain</option>
+          </select>
+        </div>
+    
+        <div id="mountainInfoContainer"></div>
+      </div>
     <script src="./scripts/locationData.js"></script>
     <script src="./scripts/mountainData.js"></script>
     <script src="./scripts/nationalParkData.js"></script>
