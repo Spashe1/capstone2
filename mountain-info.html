@@ -16,6 +16,7 @@
             <h2><a href="http://127.0.0.1:5500/home.html">Home</a></h2>
             <h2> <a href="http://127.0.0.1:5500/national-park.html">National Parks Search</a></h2>
             <h2><a href="http://127.0.0.1:5500/mountain-info.html">Mountains Information</a></h2>
+            <h2><a href="">Contact</a></h2>
             </div>
     </header>
     <style>
@@ -27,7 +28,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url("./images/Carrigain-StoryImage_2.jpg");
+            background-image: url("./images/pexels-rachel-claire-4577681.jpg");
             background-size: cover;
         }
     
@@ -47,18 +48,17 @@
             text-align: center;
         }
     </style>
+    <button type="reset" id="resetBtn" class="btn btn-secondary">Reset</button>
      <div class="container">
        <lable for="mountainSelector">Mountain selector</lable>
        <select id="mountainSelector" class="form-control"></select>
         <div class="dropdown-container">
-          <label for="mountainSelector">Select a Mountain:</label>
-          <select id="mountainSelector" class="form-control">
-            <option value="">Select a mountain</option>
-          </select>
         </div>
     
         <div id="mountainInfoContainer"></div>
+        
       </div>
+
     <script src="./scripts/locationData.js"></script>
     <script src="./scripts/mountainData.js"></script>
     <script src="./scripts/nationalParkData.js"></script>

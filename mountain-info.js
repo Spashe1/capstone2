@@ -8,6 +8,8 @@ console.log('hey')
 // })
 const mountainSelector = document.getElementById('mountainSelector');
 const mountainInfoContainer = document.getElementById('mountainInfoContainer');
+const resetBtn2 = document.getElementById('resetBtn');
+
 
 //load DD with mountain options
 mountainsArray.forEach((mountain)=> {
@@ -29,13 +31,13 @@ mountainSelector.addEventListener('change', function(){
         mountainInfoContainer.innerHTML = '';
 
     }
-    const mountainName = document.createElement('h3');
-    mountainName.textContent = mountain.name;
+    const mountainName = document.createElement('h4');
+    mountainName.textContent =  mountain.name; //'Mounatain Name:' +
 
-    const description = document.createElement('p');
-    description.textContent = mountain.desc;
+    const description = document.createElement('h4');
+    description.textContent = 'Description:' + mountain.desc;
 
-    const elevation = document.createElement('p');
+    const elevation = document.createElement('h4');
     elevation.textContent = 'Elevation: ' + mountain.elevation + ' feet';
 
     //add pics
@@ -49,4 +51,8 @@ mountainSelector.addEventListener('change', function(){
     mountainInfoContainer.appendChild(elevation);
     mountainInfoContainer.appendChild(image);
 })
-
+//resetbtn1 event lis
+resetBtn2.addEventListener('click', function(){
+    mountainSelector.selectedIndex = 0; // resets selected options
+    mountainInfoContainer.innerHTML = ''; //clears the DD
+})

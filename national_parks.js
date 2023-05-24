@@ -194,28 +194,28 @@ function displaySearchResults(parks) {
   // add the table to the search results container
   searchResultsContainer.appendChild(table);
 }
-// function to display park information based on selected park type
+// **function to display park information based on selected park type**
 function displayParkInfo(selectedParkType) {
     // clear previous park information
     searchResultsContainer.innerHTML = '';
   
-    // Filter parks based on selected park type
+    // filter parks based on selected park type
     //.includes(selectedParkType.toLowerCase()) checks if the lowercase 
     //selectedParkType value is included in the lowercase LocationName of the park. 
     //The includes()method returns true if the substring is found, and false otherwise.
     const filteredParks = nationalParksArray.filter(park => park.LocationName.toLowerCase().includes(selectedParkType.toLowerCase()));
   
-    // Check if any parks match the selected park type
+    // check if any parks match the selected park type
     if (filteredParks.length === 0) {
       const message = document.createElement('p');
       message.textContent = 'No parks found for the selected park type.';
       searchResultsContainer.appendChild(message);
     } else {
-      // Display park information for each matching park
+      // display park information for each matching park
       filteredParks.forEach(park => {
         const parkInfo = document.createElement('div');
         
-        // Create elements for location information
+        //  createElements for location information
         const locationName = document.createElement('h3');
         locationName.textContent = park.LocationName;
         parkInfo.appendChild(locationName);
@@ -240,7 +240,7 @@ function displayParkInfo(selectedParkType) {
         phone.textContent = `Phone: ${park.Phone}`;
         parkInfo.appendChild(phone);
   
-        // Add park information to the search results container
+        // add park information to the search results container
         searchResultsContainer.appendChild(parkInfo);
        // console.log(parkInfo)
       });
@@ -255,18 +255,18 @@ parkTypeDropdown.addEventListener('change', function() {
   console.log(selectedParkType)
 });
 resetBtn.addEventListener('click', function() {
-  // Clear the search results container
+  // clear the search results container
   searchResultsContainer.innerHTML = '';
   
-  // Reset the radio buttons
+  // reset the radio buttons
   locationBtn.checked = false;
   parkTypeBtn.checked = false;
   
-  // Reset the dropdowns
+  // reset the dropdowns
   locationDropdown.selectedIndex = 0;
   parkTypeDropdown.selectedIndex = 0;
   
-  // Hide the dropdown containers
+  // hide the dropdown containers
   locationDropdownContainer.style.display = 'none';
   parkTypeDropdownContainer.style.display = 'none';
 });
