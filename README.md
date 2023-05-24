@@ -1,5 +1,5 @@
 # capstone2
-project title: Nature's Blueprint.
+#project title: Nature's Blueprint.
 
  #  Project Description: 
    This website contains 3 pages. 
