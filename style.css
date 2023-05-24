@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the content horizontally */
-  color:ghostwhite;
+  color:black;
   .search-results {
     font-weight:900 /* Make the font bolder */
   }
+  
 }
 
 .search-by {
@@ -32,12 +33,12 @@
   cursor: pointer;
   font-size: 40px;
   font-weight: bold;
-  color: #000000;
+  color: red;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .radio-group label:hover {
-  color: blue;
+  color: black;
 }
 
 .content {
@@ -45,6 +46,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  
 }
 
 ul {
@@ -65,13 +67,14 @@ ul li::before {
   top: 10px;
   width: 9px;
   height: 10px;
-  background-color: black;
+  background-color: white;
   border-radius: 50%;
 }
 
 ul li a {
-  color: blue;
+  color: whitesmoke;
   text-decoration: none;
+  font-weight: 900;
 }
 
 ul li a:hover {
@@ -80,6 +83,8 @@ ul li a:hover {
 
 .text-align {
   font-weight: bold;
+  color: aliceblue;
+  background-color: #000000;
 }
 
 /* Radio buttons */
@@ -119,6 +124,7 @@ header {
 header h1 {
   font-size: 28px;
   font-weight: bold;
+  
 }
 
 header div {
@@ -142,7 +148,7 @@ header div h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("./images/pexels-rachel-claire-4577681.jpg");
+  background-image: url("./images/Screenshot\ 2023-05-24\ 115935.png");
   background-size: cover;
   z-index: -1; /*Position it behind other content/*
   pointer-events: none; /* Ignore pointer events on the background */

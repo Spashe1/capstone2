@@ -9,6 +9,6 @@
    -A Mountains Info page that provides a dropdown lost of 48 mountains and when each mountain is clicked, the mountain name along with the description and elevation desplays.
 
   # Images of all 3 pages:
-![Alt text](Screenshot%202023-05-24%20112943.png)
-![Alt text](Screenshot%202023-05-24%20112958.png)
-![Alt text](Screenshot%202023-05-24%20113009.png)
+![Alt text](Screenshot%202023-05-24%20122301.png)
+![Alt text](Screenshot%202023-05-24%20122314.png)
+![Alt text](Screenshot%202023-05-24%20122327.png)
