@@ -53,6 +53,7 @@ mountainSelector.addEventListener('change', function(){
 })
 //resetbtn1 event lis
 resetBtn2.addEventListener('click', function(){
+    console.log('clicked')
     mountainSelector.selectedIndex = 0; // resets selected options
     mountainInfoContainer.innerHTML = ''; //clears the DD
 })

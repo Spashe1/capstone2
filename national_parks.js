@@ -96,6 +96,7 @@ function populateParkTypeDropdown(){
     defaultOption.value = '';
     defaultOption.textContent = 'Select a park type';
     parkTypeDropdown.appendChild(defaultOption);
+    console.log(defaultOption)
   
     // Add options from the parkTypesArray
     for (let i = 0; i < parkTypesArray.length; i++) {
@@ -112,6 +113,7 @@ function populateParkTypeDropdown(){
 
 // function to display search results
 function displaySearchResults(parks) {
+  
     // clear previous search results
     searchResultsContainer.innerHTML = '';
   
@@ -162,6 +164,7 @@ function displaySearchResults(parks) {
 
   //  table rows for each park
   parks.forEach((park) => {
+    
     const parkRow = document.createElement('tr');
 
     // table cells for each park property
@@ -200,6 +203,7 @@ function displaySearchResults(parks) {
 }
 // **function to display park information based on selected park type**
 function displayParkInfo(selectedParkType) {
+  
     // clear previous park information
     searchResultsContainer.innerHTML = '';
   
@@ -209,46 +213,92 @@ function displayParkInfo(selectedParkType) {
     //The includes()method returns true if the substring is found, and false otherwise.
     const filteredParks = nationalParksArray.filter(park => park.LocationName.toLowerCase().includes(selectedParkType.toLowerCase()));
   
-    // check if any parks match the selected park type
-    if (filteredParks.length === 0) {
-      const message = document.createElement('p');
-      message.textContent = 'No parks found for the selected park type.';
-      searchResultsContainer.appendChild(message);
-    } else {
-      // display park information for each matching park
-      filteredParks.forEach(park => {
-        const parkInfo = document.createElement('div');
+    // // check if any parks match the selected park type
+    // if (filteredParks.length === 0) {
+    //   const message = document.createElement('p');
+    //   message.textContent = 'No parks found for the selected park type.';
+    //   searchResultsContainer.appendChild(message);
+    // } else {
+    //   // display park information for each matching park
+    //   filteredParks.forEach(park => {
+    //     const parkInfo = document.createElement('div');
         
-        //  createElements for location information
-        const locationName = document.createElement('h3');
-        locationName.textContent = park.LocationName;
-        parkInfo.appendChild(locationName);
+    //     //  createElements for location information
+    //     const locationName = document.createElement('h3');
+    //     locationName.textContent = park.LocationName;
+    //     parkInfo.appendChild(locationName);
   
-        const address = document.createElement('p');
-        address.textContent = `Address: ${park.Address}`;
-        parkInfo.appendChild(address);
+    //     const address = document.createElement('p');
+    //     address.textContent = `Address: ${park.Address}`;
+    //     parkInfo.appendChild(address);
   
-        const city = document.createElement('p');
-        city.textContent = `City: ${park.City}`;
-        parkInfo.appendChild(city);
+    //     const city = document.createElement('p');
+    //     city.textContent = `City: ${park.City}`;
+    //     parkInfo.appendChild(city);
   
-        const state = document.createElement('p');
-        state.textContent = `State: ${park.State}`;
-        parkInfo.appendChild(state);
+    //     const state = document.createElement('p');
+    //     state.textContent = `State: ${park.State}`;
+    //     parkInfo.appendChild(state);
   
-        const zipCode = document.createElement('p');
-        zipCode.textContent = `Zip Code: ${park.ZipCode}`;
-        parkInfo.appendChild(zipCode);
+    //     const zipCode = document.createElement('p');
+    //     zipCode.textContent = `Zip Code: ${park.ZipCode}`;
+    //     parkInfo.appendChild(zipCode);
   
-        const phone = document.createElement('p');
-        phone.textContent = `Phone: ${park.Phone}`;
-        parkInfo.appendChild(phone);
+    //     const phone = document.createElement('p');
+    //     phone.textContent = `Phone: ${park.Phone}`;
+    //     parkInfo.appendChild(phone);
   
-        // add park information to the search results container
-        searchResultsContainer.appendChild(parkInfo);
-       // console.log(parkInfo)
-      });
-    }
+    //     // add park information to the search results container
+    //     searchResultsContainer.appendChild(parkInfo);
+    //    // console.log(parkInfo)
+    //    searchResultsContainer.style.display = 'block'; //show
+    //   });
+    // } 
+
+    //create table
+    const table = document.createElement('table');
+    // t header
+    const headerRow = document.createElement('tr');
+    const headers = ['Location Name', 'Address', 'City', 'State', 'Zip Code' /*'Phone'*/];
+    headers.forEach(headerText => {
+      const headerCell = document.createElement('th');
+      headerCell.textContent = headerText;
+      headerRow.appendChild(headerCell);
+    });
+    table.appendChild(headerRow);
+
+    //disp park info for each matching park
+    filteredParks.forEach((park)=> {
+      const parkRow = document.createElement('tr');
+
+      // create tbl cells for each park property
+      const locationNameCell = document.createElement('tr');
+      locationNameCell.textContent = park.LocationName;
+      parkRow.appendChild(locationNameCell);
+
+      const addressCell = document.createElement('td');
+     addressCell.textContent = park.Address;
+     parkRow.appendChild(addressCell);
+
+     const cityCell = document.createElement('td');
+     cityCell.textContent = park.City;
+     parkRow.appendChild(cityCell);
+
+     const stateCell = document.createElement('td');
+     stateCell.textContent = park.State;
+     parkRow.appendChild(stateCell);
+
+     const zipCodeCell = document.createElement('td');
+     zipCodeCell.textContent = park.ZipCode;
+      parkRow.appendChild(zipCodeCell);
+
+     // add park row to table
+     table.appendChild(parkRow);
+      
+    });
+    //add tbl to the search results cont
+    searchResultsContainer.appendChild(table);
+    searchResultsContainer.style.display = 'block'; //show
   }
   
 
@@ -259,8 +309,10 @@ parkTypeDropdown.addEventListener('change', function() {
   console.log(selectedParkType)
 });
 resetBtn.addEventListener('click', function() {
+  console.log('clicked')
   // clear the search results container
   searchResultsContainer.innerHTML = '';
+  
   
   // reset the radio buttons
   locationBtn.checked = false;
@@ -270,8 +322,9 @@ resetBtn.addEventListener('click', function() {
   locationDropdown.selectedIndex = 0;
   parkTypeDropdown.selectedIndex = 0;
   
-  // hide the dropdown containers
+  // hide dd
   locationDropdownContainer.style.display = 'none';
   parkTypeDropdownContainer.style.display = 'none';
-  // searchResultsContainer.style.display ='none'
+  searchResultsContainer.style.display ='none'
 });
+//now stop messing with it!! it works fine!!
