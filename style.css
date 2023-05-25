@@ -2,24 +2,80 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the content horizontally */
-  color:black;
-  .search-results {
-    font-weight:900 /* Make the font bolder */
-  }
+  color:white;
   
+ 
+ 
+   
+}
+#resetBtn {
+  background-color: black;
+  color: white;
+  border: 1px solid #333333;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.search-by {
-  text-align: center;
-  margin-bottom: 10px; /* Add margin for spacing */
-  
+#resetBtn:hover {
+  background-color: #333333;
+  color: red;
 }
 
+
+.searchResultsContainer{
+  
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  display: none;
+}
+.searchResultsContainer.show {
+  display: flex;
+}
+.dropdown-container {
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+  /* display:none; */
+}
+
+.searchResultsContainer p {
+  background-color: #F0F0F0; /* Add desired background color for search results */
+  padding: 5px;
+  border-radius: 4px;
+}
 .form-control {
   color: black;
   font-style: initial;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 470px;
+  
+ 
 }
+
+
+
+
+
+.search-by {
+  text-align: center;
+  /* margin-bottom: 10px;  */
+  color: #000000;
+ 
+  
+}
+
+
 
 .radio-group {
   display: flex;
@@ -95,18 +151,23 @@ input[type="radio"] {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 2px solid red;
   outline: none;
   cursor: pointer;
   margin-right: 5px;
 }
 
 input[type="radio"]:checked {
-  background-color: black;
+  background-color: white;
 }
 
-.dropdown-container {
-  display: none;
+
+
+/* Style dropdown when focused */
+.form-control:focus {
+  border-color: red;
+  box-shadow: 0 0 0 2px rgba(3, 0, 0, 0.1);
+  outline: none;
 }
 
 body {
@@ -138,7 +199,7 @@ header div h2 {
 
 .main-container {
   margin-top: 50px;
-  /* Adjust the margin value as needed */
+ 
 }
 
 
@@ -154,10 +215,10 @@ header div h2 {
   pointer-events: none; /* Ignore pointer events on the background */
 }
 
-.container {
+/* .container {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   max-width: 500px;
   text-align: center;
   margin: 0 auto;
-}
+} */

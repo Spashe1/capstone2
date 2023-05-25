@@ -48,15 +48,16 @@
             text-align: center;
         }
     </style>
-    <button type="reset" id="resetBtn" class="btn btn-secondary">Reset</button>
+    
      <div class="container">
        <lable for="mountainSelector">Mountain selector</lable>
-       <select id="mountainSelector" class="form-control"></select>
+       <select id="mountainSelector" class="form-control">
+       <option value="">Select a mountain</option>
+       </select>
         <div class="dropdown-container">
         </div>
-    
         <div id="mountainInfoContainer"></div>
-        
+        <button type="reset" id="resetBtn" class="btn btn-secondary">Reset</button>
       </div>
 
     <script src="./scripts/locationData.js"></script>

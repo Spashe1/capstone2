@@ -31,6 +31,8 @@ console.log(searchResultsContainer)
 // console.log(parkTypeDropdown);
 
 //add event listeners to the radbtns
+locationDropdownContainer.style.display = 'none';
+parkTypeDropdownContainer.style.display = 'none';
 
 locationBtn.addEventListener('change', function() {
     if (locationBtn.checked){
@@ -193,6 +195,8 @@ function displaySearchResults(parks) {
 
   // add the table to the search results container
   searchResultsContainer.appendChild(table);
+  searchResultsContainer.style.display = 'block'; //show
+
 }
 // **function to display park information based on selected park type**
 function displayParkInfo(selectedParkType) {
@@ -269,4 +273,5 @@ resetBtn.addEventListener('click', function() {
   // hide the dropdown containers
   locationDropdownContainer.style.display = 'none';
   parkTypeDropdownContainer.style.display = 'none';
+  // searchResultsContainer.style.display ='none'
 });
