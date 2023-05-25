@@ -33,23 +33,23 @@ mountainSelector.addEventListener('change', function(){
     }
     const mountainName = document.createElement('h4');
     mountainName.textContent =  mountain.name; //'Mounatain Name:' +
+    mountainInfoContainer.appendChild(mountainName);
 
     const description = document.createElement('h4');
     description.textContent = 'Description:' + mountain.desc;
+    mountainInfoContainer.appendChild(description);
 
     const elevation = document.createElement('h4');
     elevation.textContent = 'Elevation: ' + mountain.elevation + ' feet';
+    mountainInfoContainer.appendChild(elevation);
 
     //add pics
     const image = document.createElement('img');
     image.src = "images/" + mountain.img;
     image.alt = mountain.name;
+    mountainInfoContainer.appendChild(image);// append the elements to the mountain info container
     console.log(image)
-    // Append the elements to the mountain info container
-    mountainInfoContainer.appendChild(mountainName);
-    mountainInfoContainer.appendChild(description);
-    mountainInfoContainer.appendChild(elevation);
-    mountainInfoContainer.appendChild(image);
+    
 })
 //resetbtn1 event lis
 resetBtn2.addEventListener('click', function(){

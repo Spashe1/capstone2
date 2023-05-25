@@ -1,12 +1,9 @@
 .search-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the content horizontally */
+  align-items: center; 
   color:white;
   
- 
- 
-   
 }
 #resetBtn {
   background-color: black;
@@ -143,13 +140,13 @@ ul li a:hover {
   background-color: #000000;
 }
 
-/* Radio buttons */
+/* radio buttons */
 input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 2px solid red;
   outline: none;
@@ -162,18 +159,10 @@ input[type="radio"]:checked {
 }
 
 
-
-/* Style dropdown when focused */
-.form-control:focus {
-  border-color: red;
-  box-shadow: 0 0 0 2px rgba(3, 0, 0, 0.1);
-  outline: none;
-}
-
 body {
   margin: 0;
   padding: 0;
-  overflow-y: scroll; /* Allow vertical scrolling */
+  overflow-y: scroll; /* allow scrolling */
 }
 
 header {

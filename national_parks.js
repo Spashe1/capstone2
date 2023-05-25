@@ -8,7 +8,7 @@ console.log('hey hey');
 //     console.log(nationalParksArray.City);
 // });
 // get radio buttons by their ID
-const locationBtn = document.getElementById('locationBtn');
+const locationBtn = document.getElementById('locationBtn'); //call htmlelements by id and assigned them to a var
 const parkTypeBtn = document.getElementById('parkTypeBtn');
 const resetBtn = document.getElementById('resetBtn')
  //smoketest
@@ -20,7 +20,7 @@ const resetBtn = document.getElementById('resetBtn')
 //  })
 const locationDropdownContainer = document.getElementById('locationDropdownContainer');
 const parkTypeDropdownContainer = document.getElementById('parkTypeDropdownContainer');
-const locationDropdown = document.getElementById('locationDropdown');
+const locationDropdown = document.getElementById('locationDropdown');//dd lists
 const parkTypeDropdown = document.getElementById('parkTypeDropdown');
 const searchResultsContainer = document.getElementById('searchResultsContainer');
 console.log(searchResultsContainer)
@@ -30,13 +30,13 @@ console.log(searchResultsContainer)
 // console.log(locationDropdown);
 // console.log(parkTypeDropdown);
 
-//add event listeners to the radbtns
-locationDropdownContainer.style.display = 'none';
-parkTypeDropdownContainer.style.display = 'none';
 
+locationDropdownContainer.style.display = 'none';//hides the dds until a radbtn is clicked
+parkTypeDropdownContainer.style.display = 'none';//^ 
+//add event listeners to the radbtns
 locationBtn.addEventListener('change', function() {
     if (locationBtn.checked){
-       console.log('Location radio button checked');
+       console.log('location radio button checked');
         //show/hide dropdowns
         locationDropdownContainer.style.display = 'block';
         parkTypeDropdownContainer.style.display = 'none';
@@ -53,14 +53,13 @@ parkTypeBtn.addEventListener('change', function(){
     }
 });
 
-//location dropdown- function to pupulate the location DD
-function populateLocationDropdown(){
-    locationDropdown.innerHTML = '';
+//location dropdown- function to add options to the location DD
+function popLocationDropdown(){
+    locationDropdown.innerHTML = ''; //empty all prev added options inside dd so i can add new options to the dd
 
-    //add default option/ create options
-
+// create a select a location option
 const defaultOption = document.createElement('option');
-defaultOption.value ='';
+defaultOption.value ='';// empty value b/c when you click on select a location we dont want anything to display
 defaultOption.textContent = 'Select a location';
 locationDropdown.appendChild(defaultOption);
 console.log(defaultOption)
@@ -74,7 +73,7 @@ for(let i =  0; i < locationsArray.length; i++){
    // console.log(locationsArray[i])
 }
 }
- populateLocationDropdown()
+ popLocationDropdown()//call the functions to populate the DDs
 
  // event listener for location DD
 locationDropdown.addEventListener('change', function() {
@@ -87,11 +86,11 @@ locationDropdown.addEventListener('change', function() {
 console.log(locationDropdown);
 console.log(locationDropdown.options);
 // //populate park type DD
-function populateParkTypeDropdown(){
+function popParkTypeDropdown(){
     //clear existing options
     parkTypeDropdown.innerText = '';
 
-    // add default options
+    // create a select a parktype option
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
     defaultOption.textContent = 'Select a park type';
@@ -108,7 +107,7 @@ function populateParkTypeDropdown(){
     console.log(parkTypesArray)
   }
 //   
-  populateParkTypeDropdown();//call the functions to populate the DDs
+  popParkTypeDropdown();//call the functions to populate the DDs
  
 
 // function to display search results
