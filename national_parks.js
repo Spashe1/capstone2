@@ -31,7 +31,7 @@ console.log(searchResultsContainer)
 // console.log(parkTypeDropdown);
 
 
-locationDropdownContainer.style.display = 'none';//hides the dds until a radbtn is clicked
+locationDropdownContainer.style.display = 'none';//hides the ddConts until a radbtn is clicked
 parkTypeDropdownContainer.style.display = 'none';//^ 
 //add event listeners to the radbtns
 locationBtn.addEventListener('change', function() {
@@ -75,11 +75,12 @@ for(let i =  0; i < locationsArray.length; i++){
 }
  popLocationDropdown()//call the functions to populate the DDs
 
- // event listener for location DD
+ // event listener for location DD// when a location is selected , do this
 locationDropdown.addEventListener('change', function() {
     const selectedLocation = locationDropdown.value;
+    // filter() checks each park obj in the nationalparray and checks if the lowercase state property matches the lowercase selected location.
     const filteredParks = nationalParksArray.filter(park => park.State.toLowerCase() === selectedLocation.toLowerCase());
-    displaySearchResults(filteredParks);
+    displaySearchResults(filteredParks);// filtered parks are the ones that match the selected loc
   });
   
 // // //smoketest
@@ -326,4 +327,4 @@ resetBtn.addEventListener('click', function() {
   parkTypeDropdownContainer.style.display = 'none';
   searchResultsContainer.style.display ='none'
 });
-//now stop messing with it!! it works fine!!
+//

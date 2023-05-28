@@ -26,9 +26,11 @@ mountainSelector.addEventListener('change', function(){
 
     console.log(selectedMountain)
     //find selected mount in the array
-    const mountain= mountainsArray.find((m) => m.name === selectedMountain);
+    const mountain= mountainsArray.find((mount) => mount.name === selectedMountain);
+    //checks if the name property of each mountain object(mount) === selected mountain value
+    //if the mountain is found if() will run
     if (mountain){
-        mountainInfoContainer.innerHTML = '';
+        mountainInfoContainer.innerHTML = '';// clears the mountInfoCont so it can display the info of the selected mount if it exists in the mountsarray
 
     }
     const mountainName = document.createElement('h4');
